@@ -9,7 +9,7 @@ import cv2
 
 def main():
 
-	filename = 'board_game.png'
+	filename = 'images/barcode_sm.jpg'
 	W = 300	
 	img = cv2.imread(filename, cv2.IMREAD_COLOR)
 	height, width, depth = img.shape
@@ -60,7 +60,7 @@ def main():
 	# image
 	cv2.drawContours(new_img, [box], -1, (0, 255, 0), 3)
 	cv2.imshow("Image", new_img)
-	cv2.imwrite("barcode_edge.jpg",new_img)
+	cv2.imwrite("images/barcode_sm_edge.jpg",new_img)
 	cv2.waitKey(0)
 
 
